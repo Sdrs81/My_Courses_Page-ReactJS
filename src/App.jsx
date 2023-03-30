@@ -29,7 +29,9 @@ function App() {
     fetchCourses();
   }, []);
 
-  return <div>{loading ? <Loading/> : <Courses courses={courses} removeCourse={deleteCourse}/>}</div>;
+  return <div className="App">
+    {loading ? <Loading/> : <Courses courses={courses} removeCourse={deleteCourse}/>}
+    </div>;
 }
 
 export default App;
